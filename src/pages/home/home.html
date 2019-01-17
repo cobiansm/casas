@@ -1,14 +1,32 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
+  <ion-toolbar color = 'primary'>
+    <ion-buttons end>
+      <button ion-button (click)='Favoritos()' icon-only color="light">
+        <ion-icon name="star"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>HouseMouse</ion-title>
+  </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content padding style='background-color: #FFFFFF'>
+ <ion-card *ngFor = 'let c of casas'>
+   <img [src] = c.imagen>
+   <ion-item (click)='verCasa(c)'>{{c.nombre}} <br>
+  {{c.precio}}</ion-item>
+   <ion-item>
+     <ion-note item-start>{{c.ubicacion}}</ion-note>
+   </ion-item>
+ </ion-card>
 </ion-content>
+
+<ion-footer no-border>
+  <ion-toolbar color='primary'>
+    <ion-row style='background-color: #FFA630'>
+    <ion-col>
+      <img src = "../assets/placeholder.png" style='height: 40px'/>
+    </ion-col>
+    <ion-col> <p style='text-align: end; font-size: 12px'>2019 ®HouseMouse</p></ion-col>
+  </ion-row>
+ </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,59 @@
+<!--
+  Generated template for the DetallesPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-toolbar color = 'primary'>
+    <ion-buttons end>
+      <button ion-button icon-only color="light">
+        <ion-icon name="star"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>HouseMouse</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding>
+<ion-card>
+  <img [src] = casa.imagen>
+
+      <ion-item>
+          <ion-icon name = 'home' item-start>
+            </ion-icon> 
+            {{casa.nombre}}
+        </ion-item>
+    <ion-item>
+      <ion-icon name = 'pricetag' item-start></ion-icon>
+        {{casa.precio}}
+    </ion-item>
+    <ion-item>
+    <ion-icon name = 'pin' item-start></ion-icon>
+       {{casa.ubicacion}}
+  </ion-item>
+   <ion-item>
+      <ion-icon name = 'body' item-start></ion-icon>
+        Cuartos: {{casa.cuartos}}
+  </ion-item>
+  <ion-item>
+    <ion-icon name = 'water' item-start></ion-icon>
+      Baños: {{casa.bathroom}}
+  </ion-item>
+
+</ion-card>
+
+<button ion-button block (click)='Fav()'>Favoritos</button>
+</ion-content>
+
+<ion-footer no-border>
+  <ion-toolbar color='primary'>
+    <ion-row style='background-color: #FFA630'>
+    <ion-col>
+      <img src = "../assets/placeholder.png" style='height: 40px'/>
+    </ion-col>
+    <ion-col> <p style='text-align: end; font-size: 12px'>2019 ®HouseMouse</p></ion-col>
+  </ion-row>
+ </ion-toolbar>
+</ion-footer>

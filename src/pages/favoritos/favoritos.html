@@ -1,0 +1,44 @@
+<!--
+  Generated template for the FavoritosPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar color='primary'>
+      <ion-title>Favoritos</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+
+
+<ion-content padding style='background-color: #FFFFFF'>
+    <ion-list>
+        <ion-item-sliding *ngFor="let c of carrito" >
+          <ion-item>
+          <ion-thumbnail item-start>
+            <img [src] = c.imagen>
+          </ion-thumbnail>
+          <ion-row><h2>{{c.nombre}}</h2></ion-row>
+          <ion-row><ion-note item-start>{{c.precio}}</ion-note></ion-row>
+        </ion-item>
+        <ion-item-options side ="right">
+          <button ion-button (click)="clickEliminar(c)" color="danger">
+            <ion-icon name="close">Eliminar</ion-icon>
+          </button>
+        </ion-item-options>
+        </ion-item-sliding>
+      </ion-list>
+</ion-content>
+
+<ion-footer no-border>
+    <ion-toolbar color='primary'>
+      <ion-row style='background-color: #FFA630'>
+      <ion-col>
+        <img src = "../assets/placeholder.png" style='height: 40px'/>
+      </ion-col>
+      <ion-col> <p style='text-align: end; font-size: 12px'>2019 ®HouseMouse</p></ion-col>
+    </ion-row>
+   </ion-toolbar>
+  </ion-footer>
