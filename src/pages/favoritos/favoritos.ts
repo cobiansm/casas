@@ -24,10 +24,10 @@ carrito = [];
     console.log('ionViewDidLoad FavoritosPage');
   }
 
-  clickEliminar(c) {
-    let index = this.carrito.findIndex(p => p.nombre == c.nombre);
-    if (index >= 0) {
-      this.carrito.splice(index, 1);
-    }
-  }
+   clickEliminar(c) {
+     let index = this.carrito.findIndex(c => c.nombre == c.nombre);
+     if (index >= 0) {
+       this.carrito.splice(index, 1);
+     }
+   }
 }
